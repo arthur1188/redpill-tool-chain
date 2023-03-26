@@ -4,9 +4,6 @@
         "vid": "0x1567",
         "sn": "1234XXX123",
         "mac1": "XXYYXXYYXXYY"
-        "SataPortMap": "1",
-        "DiskIdxMap": "00",
-        "SasIdxMap": "0",
     },
     "synoinfo": {},
     "ramdisk_copy": {},

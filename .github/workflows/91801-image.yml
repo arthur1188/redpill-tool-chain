@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: DS918
 
 # Controls when the workflow will run
 on:
@@ -20,7 +20,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       
       - name: Chmod
         run: chmod 0755 ./redpill_tool_chain.sh
@@ -31,7 +31,7 @@ jobs:
       - name: Create dsm image
         run: ./redpill_tool_chain.sh auto ds918p-7.1.0-42661
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: dsm918
           path: ./images

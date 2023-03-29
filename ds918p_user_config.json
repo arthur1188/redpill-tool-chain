@@ -8,7 +8,12 @@
         "DiskIdxMap": "00",
         "SasIdxMap": "0"
     },
-    "synoinfo": {},
+    "synoinfo": {
+    "maxlanport": "4",
+    "esataportcfg": "0xfff0",
+    "internalportcfg": "0xf",
+    "maxdisks": "20"
+    },
     "ramdisk_copy": {},
     "extensions": []
 } 

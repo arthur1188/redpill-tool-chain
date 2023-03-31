@@ -1,11 +1,19 @@
 {
-    "extra_cmdline": {
-        "pid": "0x0001",
-        "vid": "0x46f4",
-        "sn": "1234XXX123",
-        "mac1": "XXYYXXYYXXYY"
+       "extra_cmdline": {
+        "pid": "0x8902",
+        "vid": "0x1567",
+        "sn": "1780PDN234501",
+        "mac1": "001132B02BD9",
+        "SataPortMap": "24",
+        "DiskIdxMap": "0002",
+        "SasIdxMap": "0"
     },
-    "synoinfo": {},
+    "synoinfo": {
+    "maxlanport": "4",
+    "esataportcfg": "0xfff0",
+    "internalportcfg": "0xf",
+    "maxdisks": "20"
+    },
     "ramdisk_copy": {},
     "extensions": []
 }

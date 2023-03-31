@@ -65,11 +65,11 @@ jobs:
           sed -i -e "s/1234XXX123/${sn:="1130LWN123456"}/g" -e 's/XXYYXXYYXXYY/0011323D47F7/g' ${{matrix.platform}}_user_config.json
 
           # 添加第二张网卡mac并设置网卡数量
-          sed -i -e 's/001132B02BD9"/&,\n\t"netif_num": 1/' ${{matrix.platform}}_user_config.json
-          sed -i -e '\n\t"SataPortMap": "24",\n \n\t"DiskIdxMap": "0002",\n \n\t"SasIdxMap": "0",\n/' ${{matrix.platform}}_user_config.json
+          sed -i -e 's/001132B02BD9"/&,\n\t"mac2": "0011323D47F8",\n\t"netif_num": 2/' ${{matrix.platform}}_user_config.json
+          sed -i -e '\n\t"SataPortMap": "24", \n\t"DiskIdxMap": "0002", \n\t"SasIdxMap": "0",/' ${{matrix.platform}}_user_config.json
 
           # 调整synoinfo
-          sed -i -e 's/"synoinfo": {},/"synoinfo": {\n\t"maxlanport": "2",\n \n\t"esataportcfg": "0xfff0",\n \n\t"internalportcfg": "0xf",\n \n\t"maxdisks": "20"\n },/' ${{matrix.platform}}_user_config.json 
+          sed -i -e 's/"synoinfo": {},/"synoinfo": {\n\t"maxlanport": "2", \n\t"esataportcfg": "0xfff0", \n\t"internalportcfg": "0xf", \n\t"maxdisks": "20"\n },/' ${{matrix.platform}}_user_config.json 
           cat ${{matrix.platform}}_user_config.json
 
       - name: 添加扩展驱动
